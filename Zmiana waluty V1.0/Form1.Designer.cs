@@ -46,6 +46,10 @@
             this.radioButtonNagbp = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.radioButtonZrub = new System.Windows.Forms.RadioButton();
+            this.radioButtonNarub = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -155,6 +159,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.radioButtonZrub);
             this.panel1.Controls.Add(this.radioButtonZeuro);
             this.panel1.Controls.Add(this.radioButtonZzl);
             this.panel1.Controls.Add(this.radioButtonZdolar);
@@ -167,6 +172,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.radioButtonNarub);
             this.panel2.Controls.Add(this.radioButtonNaeuro);
             this.panel2.Controls.Add(this.radioButtonNazl);
             this.panel2.Controls.Add(this.radioButtonNadolar);
@@ -233,13 +239,57 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(389, 260);
+            this.button1.Location = new System.Drawing.Point(650, 304);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 8;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.Location = new System.Drawing.Point(180, 171);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(146, 13);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Data pobranego kursu waluty";
+            this.label6.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label7.Location = new System.Drawing.Point(115, 184);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(272, 55);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "2019-11-01";
+            this.label7.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // radioButtonZrub
+            // 
+            this.radioButtonZrub.AutoSize = true;
+            this.radioButtonZrub.Location = new System.Drawing.Point(49, 124);
+            this.radioButtonZrub.Name = "radioButtonZrub";
+            this.radioButtonZrub.Size = new System.Drawing.Size(48, 17);
+            this.radioButtonZrub.TabIndex = 6;
+            this.radioButtonZrub.TabStop = true;
+            this.radioButtonZrub.Text = "RUB";
+            this.radioButtonZrub.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonNarub
+            // 
+            this.radioButtonNarub.AutoSize = true;
+            this.radioButtonNarub.Location = new System.Drawing.Point(48, 124);
+            this.radioButtonNarub.Name = "radioButtonNarub";
+            this.radioButtonNarub.Size = new System.Drawing.Size(48, 17);
+            this.radioButtonNarub.TabIndex = 6;
+            this.radioButtonNarub.TabStop = true;
+            this.radioButtonNarub.Text = "RUB";
+            this.radioButtonNarub.UseVisualStyleBackColor = true;
             // 
             // ZmianaWaluty
             // 
@@ -249,6 +299,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -286,6 +338,10 @@
         private System.Windows.Forms.RadioButton radioButtonNagbp;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.RadioButton radioButtonZrub;
+        private System.Windows.Forms.RadioButton radioButtonNarub;
     }
 }
 

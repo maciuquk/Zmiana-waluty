@@ -26,14 +26,16 @@ namespace Zmiana_waluty_V1._0
                 rb_pln_f = radioButtonZzl,
                 rb_eur_f = radioButtonZeuro,
                 rb_gbp_f = radioButtonZgbp,
-                rb_usd_f = radioButtonZdolar
+                rb_usd_f = radioButtonZdolar,
+                rb_rub_f = radioButtonZrub
             };
             radiobuttonToolsTo = new CurrencyRadioButtonToolkit()
             {
                 rb_pln_f = radioButtonNazl,
                 rb_eur_f = radioButtonNaeuro,
                 rb_gbp_f = radioButtonNagbp,
-                rb_usd_f = radioButtonNadolar
+                rb_usd_f = radioButtonNadolar,
+                rb_rub_f = radioButtonNarub
             };
 
         }
@@ -51,13 +53,13 @@ namespace Zmiana_waluty_V1._0
 
         private void radioButtonZzl_Click(object sender, EventArgs e)
         {
-            ZamienButton.Text = "dasdad";
 
         }
 
         private void ZamienButton_Click(object sender, EventArgs e)
         {
             this.Text = radiobuttonToolsFrom.JakaWaluta();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
