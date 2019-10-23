@@ -28,33 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButtonZzl = new System.Windows.Forms.RadioButton();
             this.ZamienBox = new System.Windows.Forms.TextBox();
             this.ZamienButton = new System.Windows.Forms.Button();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButtonZeuro = new System.Windows.Forms.RadioButton();
+            this.radioButtonZdolar = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.radioButtonZgbp = new System.Windows.Forms.RadioButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.radioButtonNaeuro = new System.Windows.Forms.RadioButton();
+            this.radioButtonNazl = new System.Windows.Forms.RadioButton();
+            this.radioButtonNadolar = new System.Windows.Forms.RadioButton();
+            this.radioButtonNagbp = new System.Windows.Forms.RadioButton();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // radioButton1
+            // radioButtonZzl
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(448, 64);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(34, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "zł";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonZzl.AutoSize = true;
+            this.radioButtonZzl.Checked = true;
+            this.radioButtonZzl.Location = new System.Drawing.Point(49, 32);
+            this.radioButtonZzl.Name = "radioButtonZzl";
+            this.radioButtonZzl.Size = new System.Drawing.Size(34, 17);
+            this.radioButtonZzl.TabIndex = 0;
+            this.radioButtonZzl.TabStop = true;
+            this.radioButtonZzl.Text = "zł";
+            this.radioButtonZzl.UseVisualStyleBackColor = true;
             // 
             // ZamienBox
             // 
@@ -72,28 +78,29 @@
             this.ZamienButton.TabIndex = 2;
             this.ZamienButton.Text = "Zamień walutę";
             this.ZamienButton.UseVisualStyleBackColor = true;
+            this.ZamienButton.Click += new System.EventHandler(this.ZamienButton_Click);
             // 
-            // radioButton2
+            // radioButtonZeuro
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(448, 87);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(31, 17);
-            this.radioButton2.TabIndex = 3;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "€";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonZeuro.AutoSize = true;
+            this.radioButtonZeuro.Location = new System.Drawing.Point(49, 55);
+            this.radioButtonZeuro.Name = "radioButtonZeuro";
+            this.radioButtonZeuro.Size = new System.Drawing.Size(31, 17);
+            this.radioButtonZeuro.TabIndex = 3;
+            this.radioButtonZeuro.TabStop = true;
+            this.radioButtonZeuro.Text = "€";
+            this.radioButtonZeuro.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // radioButtonZdolar
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(448, 110);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(31, 17);
-            this.radioButton3.TabIndex = 4;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "$";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButtonZdolar.AutoSize = true;
+            this.radioButtonZdolar.Location = new System.Drawing.Point(49, 78);
+            this.radioButtonZdolar.Name = "radioButtonZdolar";
+            this.radioButtonZdolar.Size = new System.Drawing.Size(31, 17);
+            this.radioButtonZdolar.TabIndex = 4;
+            this.radioButtonZdolar.TabStop = true;
+            this.radioButtonZdolar.Text = "$";
+            this.radioButtonZdolar.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -129,98 +136,131 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(462, 39);
+            this.label5.Location = new System.Drawing.Point(55, 7);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(20, 13);
             this.label5.TabIndex = 5;
             this.label5.Text = "Z :";
             // 
-            // label6
+            // radioButtonZgbp
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(515, 39);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(28, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "NA :";
+            this.radioButtonZgbp.AutoSize = true;
+            this.radioButtonZgbp.Location = new System.Drawing.Point(49, 101);
+            this.radioButtonZgbp.Name = "radioButtonZgbp";
+            this.radioButtonZgbp.Size = new System.Drawing.Size(47, 17);
+            this.radioButtonZgbp.TabIndex = 4;
+            this.radioButtonZgbp.TabStop = true;
+            this.radioButtonZgbp.Text = "GBP";
+            this.radioButtonZgbp.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // panel1
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(448, 133);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(47, 17);
-            this.radioButton4.TabIndex = 4;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "GBP";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.panel1.Controls.Add(this.radioButtonZeuro);
+            this.panel1.Controls.Add(this.radioButtonZzl);
+            this.panel1.Controls.Add(this.radioButtonZdolar);
+            this.panel1.Controls.Add(this.radioButtonZgbp);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Location = new System.Drawing.Point(438, 30);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(101, 167);
+            this.panel1.TabIndex = 6;
             // 
-            // radioButton5
+            // panel2
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(509, 64);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(34, 17);
-            this.radioButton5.TabIndex = 0;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "zł";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.panel2.Controls.Add(this.radioButtonNaeuro);
+            this.panel2.Controls.Add(this.radioButtonNazl);
+            this.panel2.Controls.Add(this.radioButtonNadolar);
+            this.panel2.Controls.Add(this.radioButtonNagbp);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Location = new System.Drawing.Point(542, 30);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(101, 167);
+            this.panel2.TabIndex = 7;
             // 
-            // radioButton6
+            // radioButtonNaeuro
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(509, 87);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(31, 17);
-            this.radioButton6.TabIndex = 3;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "€";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.radioButtonNaeuro.AutoSize = true;
+            this.radioButtonNaeuro.Checked = true;
+            this.radioButtonNaeuro.Location = new System.Drawing.Point(49, 55);
+            this.radioButtonNaeuro.Name = "radioButtonNaeuro";
+            this.radioButtonNaeuro.Size = new System.Drawing.Size(31, 17);
+            this.radioButtonNaeuro.TabIndex = 3;
+            this.radioButtonNaeuro.TabStop = true;
+            this.radioButtonNaeuro.Text = "€";
+            this.radioButtonNaeuro.UseVisualStyleBackColor = true;
             // 
-            // radioButton7
+            // radioButtonNazl
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(509, 110);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(31, 17);
-            this.radioButton7.TabIndex = 4;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "$";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.radioButtonNazl.AutoSize = true;
+            this.radioButtonNazl.Location = new System.Drawing.Point(49, 32);
+            this.radioButtonNazl.Name = "radioButtonNazl";
+            this.radioButtonNazl.Size = new System.Drawing.Size(34, 17);
+            this.radioButtonNazl.TabIndex = 0;
+            this.radioButtonNazl.TabStop = true;
+            this.radioButtonNazl.Text = "zł";
+            this.radioButtonNazl.UseVisualStyleBackColor = true;
             // 
-            // radioButton8
+            // radioButtonNadolar
             // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(509, 133);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(47, 17);
-            this.radioButton8.TabIndex = 4;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "GBP";
-            this.radioButton8.UseVisualStyleBackColor = true;
+            this.radioButtonNadolar.AutoSize = true;
+            this.radioButtonNadolar.Location = new System.Drawing.Point(49, 78);
+            this.radioButtonNadolar.Name = "radioButtonNadolar";
+            this.radioButtonNadolar.Size = new System.Drawing.Size(31, 17);
+            this.radioButtonNadolar.TabIndex = 4;
+            this.radioButtonNadolar.TabStop = true;
+            this.radioButtonNadolar.Text = "$";
+            this.radioButtonNadolar.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonNagbp
+            // 
+            this.radioButtonNagbp.AutoSize = true;
+            this.radioButtonNagbp.Location = new System.Drawing.Point(49, 101);
+            this.radioButtonNagbp.Name = "radioButtonNagbp";
+            this.radioButtonNagbp.Size = new System.Drawing.Size(47, 17);
+            this.radioButtonNagbp.TabIndex = 4;
+            this.radioButtonNagbp.TabStop = true;
+            this.radioButtonNagbp.Text = "GBP";
+            this.radioButtonNagbp.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(55, 7);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(24, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Na:";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(389, 260);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ZmianaWaluty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.radioButton8);
-            this.Controls.Add(this.radioButton4);
-            this.Controls.Add(this.radioButton7);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton6);
-            this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.ZamienButton);
             this.Controls.Add(this.ZamienBox);
-            this.Controls.Add(this.radioButton5);
-            this.Controls.Add(this.radioButton1);
             this.Name = "ZmianaWaluty";
             this.Text = "Zmiana waluty V1.0";
+            this.Load += new System.EventHandler(this.ZmianaWaluty_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,21 +268,24 @@
 
         #endregion
 
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButtonZzl;
         private System.Windows.Forms.TextBox ZamienBox;
         private System.Windows.Forms.Button ZamienButton;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButtonZeuro;
+        private System.Windows.Forms.RadioButton radioButtonZdolar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton8;
+        private System.Windows.Forms.RadioButton radioButtonZgbp;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.RadioButton radioButtonNaeuro;
+        private System.Windows.Forms.RadioButton radioButtonNazl;
+        private System.Windows.Forms.RadioButton radioButtonNadolar;
+        private System.Windows.Forms.RadioButton radioButtonNagbp;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
     }
 }
 
