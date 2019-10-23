@@ -14,10 +14,16 @@ using System.Windows.Forms;
 namespace Zmiana_waluty_V1._0
 {
     public partial class ZmianaWaluty : Form
+
     {
-        //RadioButtony radiobuttony = new RadioButtony();
+        decimal kursEur = 0;
+        decimal kursDol = 0;
+        decimal kursGbp = 0;
+        decimal kursRub = 0;
+
         CurrencyRadioButtonToolkit radiobuttonToolsFrom = null;
         CurrencyRadioButtonToolkit radiobuttonToolsTo = null;
+        KursyWalut kursyWalut = new KursyWalut();
         public ZmianaWaluty()
         {
             InitializeComponent();
@@ -58,7 +64,7 @@ namespace Zmiana_waluty_V1._0
 
         private void ZamienButton_Click(object sender, EventArgs e)
         {
-            this.Text = radiobuttonToolsFrom.JakaWaluta();
+            //this.Text = radiobuttonToolsFrom.JakaWaluta();
 
         }
 
@@ -97,6 +103,43 @@ namespace Zmiana_waluty_V1._0
                 System.Windows.Forms.MessageBox.Show($"W trakcie pobierania kursu wystąpił błąd: {exception.Message}");
             }
             return false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //aktualizacja wszystkich kursów
+
+            
+            kursEur = kursyWalut.SciagnijAktualneKursy("EUR");
+            kursDol = kursyWalut.SciagnijAktualneKursy("USD");
+            kursGbp = kursyWalut.SciagnijAktualneKursy("GBP");
+            kursRub = kursyWalut.SciagnijAktualneKursy("RUB");
+            //kursyWalutTrescLabel.Text = "Kurs €: " + kursEur + " zł \nKurs $: " + kursDol +" zł \nKurs GBP: " + kursGbp + " zł \nKurs RUB: " + kursRub +" zł \n";
+            WyswietlKurstWalut();
+            string hhh = kursyWalut.SciagnijAktualnaDate("EUR");
+            dataKursowLabel.Text = hhh;
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            // dataKursowLabel.Text = dataKursuPicker.
+            dataKursuPicker.MinDate = new DateTime(2019, 6, 20); //trzeba zrobić ograniczenie do maksymalnie 93 dni przed, bo wywali błąd
+
+            // dodać obsługę błędu który się pojawia, jak nie ma tabeli na adany dzień
+            string data = dataKursuPicker.Value.ToString("yyyy-MM-dd");
+            dataKursowLabel.Text = data;
+            kursEur = kursyWalut.SciagnijAktualneKursyWgDaty("EUR", data);
+            kursDol = kursyWalut.SciagnijAktualneKursyWgDaty("USD", data);
+            kursGbp = kursyWalut.SciagnijAktualneKursyWgDaty("GBP", data);
+            kursRub = kursyWalut.SciagnijAktualneKursyWgDaty("RUB", data);
+            WyswietlKurstWalut();
+
+        }
+
+        private void WyswietlKurstWalut()
+        {
+            kursyWalutTrescLabel.Text = "Kurs €: " + kursEur + " zł \nKurs $: " + kursDol + " zł \nKurs GBP: " + kursGbp + " zł \nKurs RUB: " + kursRub + " zł \n";
         }
     }
 }

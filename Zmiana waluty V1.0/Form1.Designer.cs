@@ -47,9 +47,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.dataKursowLabel = new System.Windows.Forms.Label();
             this.radioButtonZrub = new System.Windows.Forms.RadioButton();
             this.radioButtonNarub = new System.Windows.Forms.RadioButton();
+            this.zaktualizujKursButton = new System.Windows.Forms.Button();
+            this.aktualneKursyLabel = new System.Windows.Forms.Label();
+            this.kursyWalutTrescLabel = new System.Windows.Forms.Label();
+            this.dataKursuPicker = new System.Windows.Forms.DateTimePicker();
+            this.aktualizacjaKursuWgDaty = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -165,7 +170,7 @@
             this.panel1.Controls.Add(this.radioButtonZdolar);
             this.panel1.Controls.Add(this.radioButtonZgbp);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(438, 30);
+            this.panel1.Location = new System.Drawing.Point(254, 248);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(101, 167);
             this.panel1.TabIndex = 6;
@@ -178,7 +183,7 @@
             this.panel2.Controls.Add(this.radioButtonNadolar);
             this.panel2.Controls.Add(this.radioButtonNagbp);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(542, 30);
+            this.panel2.Location = new System.Drawing.Point(358, 248);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(101, 167);
             this.panel2.TabIndex = 7;
@@ -258,16 +263,16 @@
             this.label6.Text = "Data pobranego kursu waluty";
             this.label6.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label7
+            // dataKursowLabel
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.Location = new System.Drawing.Point(115, 184);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(272, 55);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "2019-11-01";
-            this.label7.Click += new System.EventHandler(this.label2_Click);
+            this.dataKursowLabel.AutoSize = true;
+            this.dataKursowLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.dataKursowLabel.Location = new System.Drawing.Point(115, 184);
+            this.dataKursowLabel.Name = "dataKursowLabel";
+            this.dataKursowLabel.Size = new System.Drawing.Size(0, 55);
+            this.dataKursowLabel.TabIndex = 5;
+            this.dataKursowLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.dataKursowLabel.Click += new System.EventHandler(this.label2_Click);
             // 
             // radioButtonZrub
             // 
@@ -291,15 +296,65 @@
             this.radioButtonNarub.Text = "RUB";
             this.radioButtonNarub.UseVisualStyleBackColor = true;
             // 
+            // zaktualizujKursButton
+            // 
+            this.zaktualizujKursButton.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.zaktualizujKursButton.Location = new System.Drawing.Point(394, 30);
+            this.zaktualizujKursButton.Name = "zaktualizujKursButton";
+            this.zaktualizujKursButton.Size = new System.Drawing.Size(89, 62);
+            this.zaktualizujKursButton.TabIndex = 9;
+            this.zaktualizujKursButton.Text = "Aktualizacja kursu wg ostatniej tabeli";
+            this.zaktualizujKursButton.UseVisualStyleBackColor = false;
+            this.zaktualizujKursButton.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // aktualneKursyLabel
+            // 
+            this.aktualneKursyLabel.AutoSize = true;
+            this.aktualneKursyLabel.Location = new System.Drawing.Point(15, 248);
+            this.aktualneKursyLabel.Name = "aktualneKursyLabel";
+            this.aktualneKursyLabel.Size = new System.Drawing.Size(108, 13);
+            this.aktualneKursyLabel.TabIndex = 10;
+            this.aktualneKursyLabel.Text = "Aktualne kursy walut:";
+            // 
+            // kursyWalutTrescLabel
+            // 
+            this.kursyWalutTrescLabel.AutoSize = true;
+            this.kursyWalutTrescLabel.Location = new System.Drawing.Point(18, 265);
+            this.kursyWalutTrescLabel.Name = "kursyWalutTrescLabel";
+            this.kursyWalutTrescLabel.Size = new System.Drawing.Size(0, 13);
+            this.kursyWalutTrescLabel.TabIndex = 11;
+            // 
+            // dataKursuPicker
+            // 
+            this.dataKursuPicker.Location = new System.Drawing.Point(490, 70);
+            this.dataKursuPicker.Name = "dataKursuPicker";
+            this.dataKursuPicker.Size = new System.Drawing.Size(200, 20);
+            this.dataKursuPicker.TabIndex = 12;
+            // 
+            // aktualizacjaKursuWgDaty
+            // 
+            this.aktualizacjaKursuWgDaty.Location = new System.Drawing.Point(489, 30);
+            this.aktualizacjaKursuWgDaty.Name = "aktualizacjaKursuWgDaty";
+            this.aktualizacjaKursuWgDaty.Size = new System.Drawing.Size(201, 41);
+            this.aktualizacjaKursuWgDaty.TabIndex = 13;
+            this.aktualizacjaKursuWgDaty.Text = "Aktualizuj kurs wg podanej daty";
+            this.aktualizacjaKursuWgDaty.UseVisualStyleBackColor = true;
+            this.aktualizacjaKursuWgDaty.Click += new System.EventHandler(this.button2_Click_1);
+            // 
             // ZmianaWaluty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.aktualizacjaKursuWgDaty);
+            this.Controls.Add(this.dataKursuPicker);
+            this.Controls.Add(this.kursyWalutTrescLabel);
+            this.Controls.Add(this.aktualneKursyLabel);
+            this.Controls.Add(this.zaktualizujKursButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.dataKursowLabel);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -339,9 +394,14 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label dataKursowLabel;
         private System.Windows.Forms.RadioButton radioButtonZrub;
         private System.Windows.Forms.RadioButton radioButtonNarub;
+        private System.Windows.Forms.Button zaktualizujKursButton;
+        private System.Windows.Forms.Label aktualneKursyLabel;
+        private System.Windows.Forms.Label kursyWalutTrescLabel;
+        private System.Windows.Forms.DateTimePicker dataKursuPicker;
+        private System.Windows.Forms.Button aktualizacjaKursuWgDaty;
     }
 }
 
