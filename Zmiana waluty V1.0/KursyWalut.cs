@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -21,7 +22,18 @@ namespace Zmiana_waluty_V1._0
             client.DefaultRequestHeaders.Accept
               .Add(new MediaTypeWithQualityHeaderValue("application/json"));
             string requestUri = "http://api.nbp.pl/api/exchangerates/rates/a/" + waluta + "/?format=json";
-            string wynikjson = client.GetStringAsync(requestUri).Result;
+            string wynikjson = "";
+            try
+            {
+                wynikjson = client.GetStringAsync(requestUri).Result;
+            }
+            catch
+            {
+
+                SystemSounds.Exclamation.Play();
+                MessageBox.Show("Na wybrany dzień nie ma kursu walut. \n Wybierz inny dzień.");
+                return 0;
+            }
             dynamic obiektJson = (dynamic)JsonConvert.DeserializeObject<object>(wynikjson);
             decimal kurs = obiektJson.rates[0].mid;
 
@@ -45,11 +57,30 @@ namespace Zmiana_waluty_V1._0
 
         public decimal SciagnijAktualneKursyWgDaty(string waluta, string data)
         {
+           
+            
+            
+            
             HttpClient client = new HttpClient();
             client.DefaultRequestHeaders.Accept
               .Add(new MediaTypeWithQualityHeaderValue("application/json"));
             string requestUri = "http://api.nbp.pl/api/exchangerates/rates/a/" + waluta + "/" + data +"/?format=json";
-            string wynikjson = client.GetStringAsync(requestUri).Result;
+            string wynikjson = "";
+            try
+            {
+                wynikjson = client.GetStringAsync(requestUri).Result;
+            }
+            catch 
+            {
+
+                SystemSounds.Exclamation.Play();
+                MessageBox.Show("Na wybrany dzień nie ma kursu walut. \n Wybierz inny dzień.");
+                return 0;
+            }
+
+
+
+            
             dynamic obiektJson = (dynamic)JsonConvert.DeserializeObject<object>(wynikjson);
             decimal kurs = obiektJson.rates[0].mid;
 

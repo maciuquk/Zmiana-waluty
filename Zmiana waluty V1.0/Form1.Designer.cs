@@ -62,6 +62,7 @@
             this.ZamienBox.Name = "ZamienBox";
             this.ZamienBox.Size = new System.Drawing.Size(241, 62);
             this.ZamienBox.TabIndex = 1;
+            this.ZamienBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ZamienBox_KeyDown);
             // 
             // ZamienButton
             // 
@@ -298,7 +299,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(45, 13);
             this.label9.TabIndex = 17;
-            this.label9.Text = "4 miejsc";
+            this.label9.Text = "2 miejsc";
             // 
             // ZmianaWaluty
             // 
